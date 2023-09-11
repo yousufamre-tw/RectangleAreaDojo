@@ -1,5 +1,5 @@
-import org.example.Rectangle;
-import org.example.RectangleException;
+import org.bootcamp.Rectangle;
+import org.bootcamp.RectangleException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

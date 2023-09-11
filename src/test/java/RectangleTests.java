@@ -11,7 +11,7 @@ public class RectangleTests {
 
         Rectangle rectangle = new Rectangle(length, breadth);
 
-        double area = rectangle.calculateArea();
+        double area = rectangle.area();
 
         Assertions.assertEquals(10.0, area);
     }
@@ -23,7 +23,7 @@ public class RectangleTests {
         final double breadth = 2;
 
         Exception exception = Assertions.assertThrows(RectangleException.class, ()-> new Rectangle(length, breadth));
-        Assertions.assertEquals("Length should not be negative",exception.getMessage());
+        Assertions.assertEquals("Rectangle parameter should not be negative",exception.getMessage());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class RectangleTests {
         final double breadth = -2;
 
         Exception exception = Assertions.assertThrows(RectangleException.class, ()-> new Rectangle(length, breadth));
-        Assertions.assertEquals("Breadth should not be negative",exception.getMessage());
+        Assertions.assertEquals("Rectangle parameter should not be negative",exception.getMessage());
     }
 
     @Test

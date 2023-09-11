@@ -11,14 +11,12 @@ public class Rectangle {
         this.length = length;
     }
 
-    public double calculateArea(){
+    public double area(){
         return length * breadth;
     }
 
     public void validateParameters(double length, double breadth) throws RectangleException{
-        if(length < 0) throw new RectangleException("Length should not be negative");
-
-        if(breadth < 0) throw new RectangleException("Breadth should not be negative");
+        if(length < 0 || breadth < 0) throw new RectangleException("Rectangle parameter should not be negative");
     }
     public double perimeter() {
         return 2*(length+breadth);
